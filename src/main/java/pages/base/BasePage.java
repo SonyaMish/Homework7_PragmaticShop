@@ -35,4 +35,11 @@ public class BasePage {
     public static boolean isElementDisplayed(By locator){
         return driver.findElement(locator).isDisplayed();
     }
+
+    public static String getTextFromAlert(By locator){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        String alertText = driver.findElement(locator).getText();
+
+        return alertText;
+    }
 }

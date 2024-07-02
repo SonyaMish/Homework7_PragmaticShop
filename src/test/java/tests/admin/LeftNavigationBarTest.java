@@ -17,7 +17,8 @@ public class LeftNavigationBarTest extends BaseTest {
         AddNewCategoryPage.writeTextInCategoryName("SonyaCategory");
         AddNewCategoryPage.writeTextInMetaTagTitle("SonyaTag");
         AddNewCategoryPage.clickOnSaveButton();
-        Assert.assertTrue(AddNewCategoryPage.isAlertDisplayed());
+        String alertText = AddNewCategoryPage.getAlertElementText();
+        Assert.assertEquals(alertText, "Success: You have modified categories!\n" + "×");
     }
 
     @Test

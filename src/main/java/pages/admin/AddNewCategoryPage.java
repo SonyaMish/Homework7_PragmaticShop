@@ -24,4 +24,8 @@ public class AddNewCategoryPage extends BasePage{
     public static boolean isAlertDisplayed(){
         return isElementDisplayed(ALERT);
     }
+
+    public static String getAlertElementText(){
+        return getTextFromAlert(ALERT);
+    }
 }
